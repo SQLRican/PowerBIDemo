@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "a742e10f854605013701",
+  "position": {
+    "x": 963.75,
+    "y": 13.75,
+    "z": 0,
+    "height": 698.75,
+    "width": 303.75,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Failed Banks"
+                    }
+                  },
+                  "Property": "State"
+                }
+              },
+              "queryRef": "Failed Banks.State",
+              "nativeQueryRef": "State",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Failed Banks"
+                    }
+                  },
+                  "Property": "Total Banks"
+                }
+              },
+              "queryRef": "Failed Banks.Total Banks",
+              "nativeQueryRef": "Total Banks"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Failed Banks"
+                  }
+                },
+                "Property": "Total Banks"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

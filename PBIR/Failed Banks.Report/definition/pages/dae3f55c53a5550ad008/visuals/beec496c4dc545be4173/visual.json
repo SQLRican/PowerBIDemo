@@ -1,0 +1,240 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "beec496c4dc545be4173",
+  "position": {
+    "x": 438.75,
+    "y": 12.5,
+    "z": 2000,
+    "height": 698.75,
+    "width": 506.25,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Failed Banks"
+                        }
+                      },
+                      "Hierarchy": "Geo Hierarchy"
+                    }
+                  },
+                  "Level": "State"
+                }
+              },
+              "queryRef": "Failed Banks.Geo Hierarchy.State",
+              "nativeQueryRef": "Geo Hierarchy State",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Failed Banks"
+                        }
+                      },
+                      "Hierarchy": "Geo Hierarchy"
+                    }
+                  },
+                  "Level": "City, State"
+                }
+              },
+              "queryRef": "Failed Banks.Geo Hierarchy.City, State",
+              "nativeQueryRef": "Geo Hierarchy City, State",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Failed Banks"
+                        }
+                      },
+                      "Hierarchy": "Geo Hierarchy"
+                    }
+                  },
+                  "Level": "Bank Name"
+                }
+              },
+              "queryRef": "Failed Banks.Geo Hierarchy.Bank Name",
+              "nativeQueryRef": "Geo Hierarchy Bank Name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Failed Banks"
+                    }
+                  },
+                  "Property": "Total Banks"
+                }
+              },
+              "queryRef": "Failed Banks.Total Banks",
+              "nativeQueryRef": "Total Banks"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Failed Banks"
+                      }
+                    },
+                    "Hierarchy": "Geo Hierarchy"
+                  }
+                },
+                "Level": "State"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Failed Banks"
+                      }
+                    },
+                    "Hierarchy": "Geo Hierarchy"
+                  }
+                },
+                "Level": "City, State"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Failed Banks"
+                      }
+                    },
+                    "Hierarchy": "Geo Hierarchy"
+                  }
+                },
+                "Level": "Bank Name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Failed Banks.Geo Hierarchy.State"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Failed Banks"
+                    }
+                  },
+                  "Property": "State"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Failed Banks.Geo Hierarchy.City, State"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Failed Banks"
+                    }
+                  },
+                  "Property": "City, State"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Failed Banks.Geo Hierarchy.Bank Name"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'FL'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Jacksonville, FL'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  }
+}

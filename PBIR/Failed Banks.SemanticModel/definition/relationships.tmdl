@@ -1,0 +1,9 @@
+relationship 0eb4c112-0274-4dfd-9bc8-97f628cb481b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.Date
+	toColumn: LocalDateTable_59f42c7c-1ca7-49c6-9643-2feca9583e4c.Date
+
+relationship 7c36d047-a040-5adf-8849-06b56e83aa5e
+	fromColumn: 'Failed Banks'.'Closing Date'
+	toColumn: Date.Date
+
