@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Failed Banks"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "60a7d98f-f3da-4bd7-b987-ae4093972ad9"
+  }
+}

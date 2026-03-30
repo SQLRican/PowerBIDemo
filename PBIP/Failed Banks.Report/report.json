@@ -1,0 +1,135 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.97\",\"report\":\"2.0.97\",\"page\":\"1.3.97\"}},\"customTheme\":{\"name\":\"Storm6878580266043082.json\",\"type\":1,\"version\":{\"visual\":\"1.8.97\",\"report\":\"2.0.97\",\"page\":\"1.3.97\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "6bc55b401438ca81054a",
+      "config": "{}",
+      "name": "dbf26eefcd371094aeeb",
+      "parameters": "[{\"name\":\"72a6db6e166473a90b36\",\"boundFilter\":\"35c1f7b0472a6202c4d2\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Failed Banks\"}},\"Property\":\"State\"}}}]",
+      "type": 2
+    }
+  ],
+  "publicCustomVisuals": [
+    "PBI_CV_16948668_E17D_454B_8664_2F2C470EA8C1"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Storm6878580266043082.json",
+            "path": "Storm6878580266043082.json",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"visibility\":1,\"type\":1}",
+      "displayName": "Tooltip",
+      "displayOption": 3,
+      "filters": "[{\"name\":\"35c1f7b0472a6202c4d2\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Failed Banks\"}},\"Property\":\"State\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 240.00,
+      "name": "6bc55b401438ca81054a",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"864055b2ecdaec40e3c6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":106,\"y\":10,\"z\":0,\"width\":214,\"height\":220,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"azureMap\",\"projections\":{\"Category\":[{\"queryRef\":\"Failed Banks.City, State\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"City, State\"},\"Name\":\"Failed Banks.City, State\",\"NativeReferenceName\":\"City, State\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"defaultStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'road'\"}}},\"showStylePicker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showNavigationControls\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showSelectionControl\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"zoom\":{\"expr\":{\"Literal\":{\"Value\":\"0.14D\"}}},\"centerLatitude\":{\"expr\":{\"Literal\":{\"Value\":\"34.890324302754124D\"}}},\"centerLongitude\":{\"expr\":{\"Literal\":{\"Value\":\"-111.97062683105469D\"}}}}}],\"bubbleLayer\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"minBubbleRadius\":{\"expr\":{\"Literal\":{\"Value\":\"6L\"}}},\"maxRadius\":{\"expr\":{\"Literal\":{\"Value\":\"21L\"}}},\"bubbleStrokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"autoStrokeColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"layerPosition\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 220.00,
+          "width": 214.00,
+          "x": 106.00,
+          "y": 10.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c715d9985a9d10bd44b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":10,\"z\":1000,\"width\":98,\"height\":220,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"40D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 220.00,
+          "width": 98.00,
+          "x": 0.00,
+          "y": 10.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 320.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Report Summary",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "dae3f55c53a5550ad008",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"83315530bbb4b961ac89\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.75,\"y\":302.5,\"z\":1000,\"width\":401.25,\"height\":408.75,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Date.Month Name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month Name\"},\"Name\":\"Date.Month Name\",\"NativeReferenceName\":\"Month Name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Month Name\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 408.75,
+          "width": 401.25,
+          "x": 13.75,
+          "y": 302.50,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a742e10f854605013701\",\"layouts\":[{\"id\":0,\"position\":{\"x\":963.75,\"y\":13.75,\"z\":0,\"width\":303.75,\"height\":698.75,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Failed Banks.State\",\"active\":true}],\"Y\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"State\"},\"Name\":\"Failed Banks.State\",\"NativeReferenceName\":\"State\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 698.75,
+          "width": 303.75,
+          "x": 963.75,
+          "y": 13.75,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"beec496c4dc545be4173\",\"layouts\":[{\"id\":0,\"position\":{\"x\":438.75,\"y\":12.5,\"z\":2000,\"width\":506.25,\"height\":698.75,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Failed Banks.Geo Hierarchy.State\",\"active\":true},{\"queryRef\":\"Failed Banks.Geo Hierarchy.City, State\",\"active\":true},{\"queryRef\":\"Failed Banks.Geo Hierarchy.Bank Name\",\"active\":true}],\"Values\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Hierarchy\":\"Geo Hierarchy\"}},\"Level\":\"State\"},\"Name\":\"Failed Banks.Geo Hierarchy.State\",\"NativeReferenceName\":\"Geo Hierarchy State\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Hierarchy\":\"Geo Hierarchy\"}},\"Level\":\"City, State\"},\"Name\":\"Failed Banks.Geo Hierarchy.City, State\",\"NativeReferenceName\":\"Geo Hierarchy City, State\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Hierarchy\":\"Geo Hierarchy\"}},\"Level\":\"Bank Name\"},\"Name\":\"Failed Banks.Geo Hierarchy.Bank Name\",\"NativeReferenceName\":\"Geo Hierarchy Bank Name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Hierarchy\":\"Geo Hierarchy\"}},\"Level\":\"State\"}}},{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Hierarchy\":\"Geo Hierarchy\"}},\"Level\":\"City, State\"}}},{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Hierarchy\":\"Geo Hierarchy\"}},\"Level\":\"Bank Name\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Failed Banks.Geo Hierarchy.State\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Failed Banks\"}},\"Property\":\"State\"}}],\"isPinned\":true},{\"queryRefs\":[\"Failed Banks.Geo Hierarchy.City, State\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Failed Banks\"}},\"Property\":\"City, State\"}}],\"isPinned\":true},{\"queryRefs\":[\"Failed Banks.Geo Hierarchy.Bank Name\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'FL'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Jacksonville, FL'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 698.75,
+          "width": 506.25,
+          "x": 438.75,
+          "y": 12.50,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"d62a75dc25a666825e49\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.75,\"y\":13.75,\"z\":4000,\"width\":401.25,\"height\":123.75,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"PBI_CV_16948668_E17D_454B_8664_2F2C470EA8C1\",\"projections\":{\"category\":[{\"queryRef\":\"Date.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"},\"Name\":\"Date.Year\",\"NativeReferenceName\":\"Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"transitionSettings\":[{\"properties\":{\"timeInterval\":{\"expr\":{\"Literal\":{\"Value\":\"4000L\"}}}}}],\"colorSelector\":[{\"properties\":{\"pickedColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 123.75,
+          "width": 401.25,
+          "x": 13.75,
+          "y": 13.75,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"fbc5c2f9a07569d44a9b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":13.75,\"y\":158.75,\"z\":3000,\"width\":401.25,\"height\":117.5,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Failed Banks.Total Banks\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Failed Banks\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"},\"Name\":\"Failed Banks.Total Banks\",\"NativeReferenceName\":\"Total Banks\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Total Banks\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 117.50,
+          "width": 401.25,
+          "x": 13.75,
+          "y": 158.75,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Storm6878580266043082.json"
+}

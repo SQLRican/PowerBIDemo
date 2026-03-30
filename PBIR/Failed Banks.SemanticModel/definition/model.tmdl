@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Failed Banks"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Failed Banks'
+ref table DateTableTemplate_b62546aa-1e64-4c14-8178-d7249cc802a5
+ref table Date
+ref table LocalDateTable_59f42c7c-1ca7-49c6-9643-2feca9583e4c
+
+ref cultureInfo en-US
+

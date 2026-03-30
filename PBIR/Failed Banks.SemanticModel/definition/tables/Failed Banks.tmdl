@@ -1,0 +1,83 @@
+table 'Failed Banks'
+	lineageTag: 1e35a6db-182f-4cf8-bbe0-3ed47e1d7633
+
+	measure 'Total Banks' = COUNTROWS('Failed Banks')
+		formatString: 0
+		lineageTag: ac32ac83-2270-4c58-b147-ec0731ec1587
+
+	column 'Bank Name'
+		dataType: string
+		lineageTag: e9223982-40be-4b03-a962-b739cec876ab
+		summarizeBy: none
+		sourceColumn: Bank Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 8960457e-77ef-4252-a3d5-c81c4eeaa81d
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: cdcde070-76a4-4555-b124-4513af5bb1e9
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Closing Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 88adf9ea-8337-4011-a396-8397494cd6fd
+		summarizeBy: none
+		sourceColumn: Closing Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'City, State'
+		dataType: string
+		lineageTag: 08002987-64f2-4645-ac89-d71cc55592d1
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: City, State
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Geo Hierarchy'
+		lineageTag: ead31ee8-9dd4-4e28-abb5-c3c4e62fff02
+
+		level State
+			lineageTag: 6d169262-e9df-4209-9403-f75fc85709c8
+			column: State
+
+		level 'City, State'
+			lineageTag: 8150d427-8807-4d01-9295-9ada499102c3
+			column: 'City, State'
+
+		level 'Bank Name'
+			lineageTag: 9bbb3a20-6ab0-4ca6-803a-2ca4fa219455
+			column: 'Bank Name'
+
+	partition 'Failed Banks' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://www.fdic.gov/bank-failures/download-data"),[Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Bank Name�", type text}, {"City�", type text}, {"State�", type text}, {"Cert�", Int64.Type}, {"Acquiring Institution�", type text}, {"Closing Date�", type date}, {"Fund", Int64.Type}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"Bank Name�", "City�", "State�", "Closing Date�"}),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Removed Other Columns", "City, State", each Text.Combine({[#"City�"], ", ", [#"State�"]}), type text),
+				    #"Renamed Columns" = Table.RenameColumns(#"Inserted Merged Column",{{"Bank Name�", "Bank Name"}, {"City�", "City"}, {"State�", "State"}, {"Closing Date�", "Closing Date"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
